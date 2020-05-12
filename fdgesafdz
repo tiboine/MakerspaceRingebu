@@ -1,0 +1,79 @@
+[33mcommit d1c807c5b2189848a1cc4dd2e4f883ef34b0b6f5[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31mMakerspaceRingebu/master[m[33m)[m
+Author: Tor Ivan <urbanthor@gmail.com>
+Date:   Tue May 12 17:58:20 2020 +0200
+
+    yes
+
+[33mcommit a356fee4f7c6e6fbc0e4f267cc35bfefca1b1d3a[m
+Author: Tor Ivan <urbanthor@gmail.com>
+Date:   Tue May 12 14:35:28 2020 +0200
+
+    added section
+
+[33mcommit d6237e7b07066a03ce7b7eaf0b6e1bf0265dd68d[m
+Author: Tor Ivan <urbanthor@gmail.com>
+Date:   Tue May 12 11:45:13 2020 +0200
+
+    test n
+
+[33mcommit fa20da5e2e8b087ee21c3ec34a33cddf5b3d7a40[m
+Author: Tor Ivan <urbanthor@gmail.com>
+Date:   Tue May 12 11:44:13 2020 +0200
+
+    new changes
+
+[33mcommit 5cdad0cb6e6d7b5170bac7d45538dc7266496325[m
+Merge: 1584217 5da6390
+Author: Tor Ivan <urbanthor@gmail.com>
+Date:   Tue May 12 11:43:23 2020 +0200
+
+    Merge branch 'master' of https://github.com/tiboine/MakerspaceRingebu
+
+[33mcommit 5da6390a7318b4689a769ca7eab63e2eef7cb48e[m[33m ([m[1;32mdev[m[33m)[m
+Author: Tor Ivan <urbanthor@gmail.com>
+Date:   Tue May 12 11:09:13 2020 +0200
+
+    test again
+
+[33mcommit 1138adf55c36057c2de86c5c6294e8a2dfaf1257[m
+Author: Tor Ivan <urbanthor@gmail.com>
+Date:   Tue May 12 11:04:58 2020 +0200
+
+    test
+
+[33mcommit 3b79942fb738705ec0a40515ef4bf53f0c743965[m
+Author: Tor Ivan <urbanthor@gmail.com>
+Date:   Tue May 12 11:02:44 2020 +0200
+
+    clean-up test
+
+[33mcommit 3a3b9a95c90938ae5bbf0aabb3e088f4758caec4[m
+Merge: 34277ca 298a3e9
+Author: Tor Ivan <urbanthor@gmail.com>
+Date:   Tue May 12 11:01:56 2020 +0200
+
+    Merge branch 'master' of https://github.com/tiboine/MakerspaceRingebu
+
+[33mcommit 15842178c262b18c7ef888f2b2a5dc854c176eb1[m
+Author: Tor Ivan <urbanthor@gmail.com>
+Date:   Tue May 12 10:52:07 2020 +0200
+
+    test2
+
+[33mcommit 34277ca5807f16fd034fbbf09bb124251de93164[m
+Author: Tor Ivan <urbanthor@gmail.com>
+Date:   Tue May 12 10:50:07 2020 +0200
+
+    test
+
+[33mcommit 298a3e991960a2abfe5e226e50438fd6baffced3[m
+Author: Tor Ivan <urbanthor@gmail.com>
+Date:   Tue May 12 10:40:23 2020 +0200
+
+    removed arrow
+
+[33mcommit 36d8eb33912cd465844251960b82ece0089bd427[m
+Author: Tor Ivan <urbanthor@gmail.com>
+Date:   Tue May 12 09:57:23 2020 +0200
+
+    first commit
