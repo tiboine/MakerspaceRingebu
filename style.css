@@ -30,6 +30,7 @@ h1 {
 }
 h2 {
   font-size: 4em;
+  padding: 30px 0;
 }
 
 ul {
@@ -124,9 +125,10 @@ main {
   font-size: 14vw;
   height: auto;
   word-wrap: break-word;
+  transition: all 0.25s ease-in-out;
 }
 .section1 h1:hover {
-  transition: all 0.25s ease;
+  transition: all 0.25s ease-in-out;
   transform: rotate(2deg);
 }
 /*.section1 .image-ms {
@@ -141,9 +143,15 @@ main {
   padding-top: 150px;
   display: flex;
   flex-direction: column;
+
   text-align: center;
   background-image: linear-gradient(180deg, #db4739 0%, #b6702e 100%);
   min-height: 100vh;
+}
+.section2-innhold {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 50px;
 }
 .section3 {
   padding-top: 150px;
@@ -159,6 +167,8 @@ main {
   padding: 0 50px;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .frontbilder {
   height: 400px;
@@ -182,7 +192,12 @@ main {
   background-image: url(./images/mindstorm.png);
   filter: drop-shadow(20px 20px 50px rgba(253, 207, 0, 0.8));
 }
-.section3-innhold #kol-1,
+#snapmaker {
+  background-image: url(./images/snapmaker.png);
+  filter: drop-shadow(20px 20px 50px rgba(255, 255, 255, 0.8));
+}
+.section3-innhold .innhold,
+#kol-1,
 #kol-2,
 #kol-3,
 #kol-4 {
@@ -311,7 +326,8 @@ footer {
     padding: 50px 10px;
   }
 
-  .section3-innhold #kol-1,
+  .section3-innhold .innhold,
+  #kol-1,
   #kol-2,
   #kol-3,
   #kol-4 {
@@ -319,9 +335,12 @@ footer {
     margin: 0;
     font-size: 14px;
   }
+  .frontbilder {
+    height: 200px;
+  }
   nav {
     transform: rotate(0deg);
-    background-color: #48e9e9;
+    background-color: black;
     height: 50px;
     /*position: static;*/
     margin-top: 0;
@@ -332,7 +351,7 @@ footer {
     padding: 0 100px;
     top: 49px;
     max-height: 100vh;
-    background-color: #48e9e9;
+    background-color: black;
     /*background-color: #be3144;*/
     display: flex;
     flex-direction: column;
