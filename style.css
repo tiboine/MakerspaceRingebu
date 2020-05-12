@@ -1,0 +1,388 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+a {
+  color: rgb(243, 243, 243);
+}
+p {
+  font-size: 3vw;
+  font-size: 1.4em;
+}
+h1 {
+  font-size: 6em;
+}
+h2 {
+  font-size: 4em;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: silver;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem; /* 18px */
+  font-weight: 400;
+  line-height: 1.4;
+  background-color: indianred;
+}
+nav {
+  margin-top: 20px;
+  background: #a7345c;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  transform: rotate(2deg);
+  z-index: 100;
+  text-transform: uppercase;
+  height: 70px;
+}
+
+.nav-list {
+  display: flex;
+  color: white;
+  margin-right: 2em;
+  max-width: 100%;
+}
+.nav-list a {
+  padding: 1.5rem;
+  color: white;
+  display: block;
+  transition: all 0.25s ease;
+}
+.nav-list a:hover {
+  background-color: black;
+}
+.logo {
+  color: white;
+  padding-top: 12px;
+  display: flex;
+  justify-items: flex-start;
+  font-size: 2em;
+}
+main {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+.section1 {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: -150px;
+  padding-top: 150px;
+  background-image: linear-gradient(180deg, #48e9e9 0%, #db4739 100%);
+  height: 100vh;
+}
+.section1 .heading {
+  margin-top: -150px;
+}
+.section2 {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: linear-gradient(180deg, #db4739 0%, #388f92 100%);
+  min-height: 100vh;
+}
+.section2-innhold {
+  display: flex;
+  flex-direction: row;
+  padding: 0 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.section2-innhold #kol-1,
+#kol-2,
+#kol-3,
+#kol-4 {
+  max-width: 500px;
+  padding: 50px;
+}
+.section2-innhold h3 {
+  text-transform: uppercase;
+  border-bottom: 1px solid white;
+  margin: 10px;
+}
+.section3 {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  min-height: 100vh;
+  background-image: linear-gradient(180deg, #388f92 0%, #385592 100%);
+}
+#maps {
+  padding: 50px 0;
+}
+.heading {
+  text-transform: uppercase;
+}
+
+.section1 h1:hover {
+  transition: all 0.25s ease;
+  transform: rotate(1deg);
+}
+
+#lieber {
+  max-width: 500px;
+  height: auto;
+  display: block;
+  position: absolute;
+  right: 100px;
+  bottom: 50px;
+  transform: rotate(14deg);
+  filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.2));
+}
+#blinky {
+  max-width: 200px;
+  display: block;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  transform: rotate(14deg);
+  filter: drop-shadow(-20px -20px 20px rgba(0, 0, 0, 0.2));
+}
+footer {
+  display: flex;
+  background: #385592;
+  color: white;
+  height: 150px;
+  width: 100%;
+
+  border-top: 1px solid white;
+  justify-content: center;
+}
+.footer-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+}
+
+.footer-content {
+  display: flex;
+  padding: 0 50px;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.burger {
+  margin: 8px 25px;
+  display: none;
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 850px) {
+  main .section2,
+  .section3 {
+    padding-top: 50px;
+  }
+  h1 {
+    font-size: 1.7em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  ul {
+    font-size: 1.2em;
+  }
+  .logo {
+    font-size: 1.2em;
+  }
+  footer {
+    height: 100%;
+  }
+  .footer-main {
+    flex-direction: column;
+    padding: 50px 0;
+  }
+  .footer-content {
+    font-size: 4vw;
+    padding: 10px 0;
+    align-items: center;
+  }
+  #lieber {
+    max-width: 150px;
+    align-items: center;
+  }
+  #blinky {
+    max-width: 100px;
+  }
+  .section2 .section2-innhold {
+    padding: 50px 10px;
+  }
+
+  .section2-innhold #kol-1,
+  #kol-2,
+  #kol-3,
+  #kol-4 {
+    padding: 10px 0;
+    margin: 0;
+    font-size: 14px;
+  }
+  nav {
+    transform: rotate(0deg);
+    background-color: #48e9e9;
+    height: 50px;
+    /*position: static;*/
+    margin-top: 0;
+  }
+  .nav-list {
+    position: absolute;
+
+    padding: 0 100px;
+    top: 49px;
+    max-height: 100vh;
+    background-color: #48e9e9;
+    /*background-color: #be3144;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    z-index: 100;
+  }
+  .nav-list li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+.icon {
+  position: absolute;
+  margin-left: 40px;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 60px;
+  cursor: pointer;
+}
+.arrow {
+  position: absolute;
+
+  top: 25px;
+  width: 10px;
+  height: 90%;
+  background-color: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+
+  animation: arrow 1700ms linear infinite;
+  animation-iteration-count: infinite;
+
+  /*transform-origin: top; */
+}
+.arrow::after,
+.arrow::before {
+  content: "";
+  position: absolute;
+  height: 60%;
+  width: 10px;
+  top: 33px;
+  right: 8px;
+  background-color: #fff;
+}
+
+.arrow::after {
+  top: 33px;
+  left: 8px;
+  transform: rotate(45deg);
+}
+
+.arrow::before {
+  bottom: 12px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+  transform: rotate(135deg);
+}
+
+.arrowpoint {
+  animation-name: arrowpoint;
+  /* transform: translate(0);*/
+}
+@keyframes arrowpoint {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
