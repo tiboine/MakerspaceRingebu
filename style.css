@@ -81,11 +81,39 @@ nav {
   background-color: black;
 }
 .logo {
+  animation: 0.5s logoAnimation;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  padding-top: 12px;
+  padding-right: 100px;
+  font-size: 2em;
+}
+@keyframes logoAnimation {
+  from {
+    transform: translateX(-1000px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes logoAnimationHide {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+    visibility: hidden;
+  }
+}
+.logoHide {
+  animation: 2s logoAnimationHide;
   color: white;
   padding-top: 12px;
   display: flex;
   justify-items: flex-start;
   font-size: 2em;
+  visibility: hidden;
 }
 main {
   padding-top: 150px;
@@ -277,6 +305,14 @@ footer {
   transition: all 0.3s ease;
 }
 @media screen and (max-width: 850px) {
+  .logoMobile {
+    color: white;
+    display: flex;
+    padding-top: 12px;
+    padding-left: 12px;
+    font-size: 1.2em;
+    padding-right: 10px;
+  }
   .section1 .heading h1 {
     font-size: 3em;
   }
@@ -300,9 +336,7 @@ footer {
   ul {
     font-size: 1.2em;
   }
-  .logo {
-    font-size: 1.2em;
-  }
+
   footer {
     height: 100%;
   }
@@ -322,8 +356,9 @@ footer {
   #blinky {
     max-width: 100px;
   }
-  .section3 .section3-innhold {
-    padding: 50px 10px;
+  .section3 .section3-innhold,
+  .section2 {
+    padding: 50px 20px;
   }
 
   .section3-innhold .innhold,

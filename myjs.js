@@ -29,6 +29,7 @@ navSlide();
    * Copyright 2012, Digital Fusion
    * Licensed under the MIT license.
    * http://teamdf.com/jquery-plugins/license/
+   *https://css-tricks.com/slide-in-as-you-scroll-down-boxes/
    *
    * @author Sam Sehnert
    * @desc A small plugin that checks whether elements are within
@@ -69,3 +70,29 @@ win.scroll(function (event) {
     }
   });
 });
+
+function logoScroll() {
+  jQuery(function ($) {
+    var $nav = $(".logoHide");
+    var $navShow = $(".logoShow");
+    var $win = $(window);
+    var winH = $win.height(); // Get the window height.
+
+    $win
+      .on("scroll", function () {
+        if ($(this).scrollTop() < winH) {
+          $nav.addClass("logoHide");
+          $nav.removeClass("logo");
+        } else {
+          $nav.removeClass("logoHide");
+          $nav.addClass("logo");
+        }
+      })
+      .on("resize", function () {
+        // If the user resizes the window
+        winH = $(this).height(); // you'll need the new height value
+      });
+  });
+}
+
+logoScroll();
