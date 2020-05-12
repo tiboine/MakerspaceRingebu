@@ -108,40 +108,93 @@ main {
   text-align: center;
   margin-top: -150px;
   padding-top: 150px;
-  background-image: linear-gradient(180deg, #48e9e9 0%, #db4739 100%);
+  background-image: linear-gradient(
+    130deg,
+    rgb(25, 105, 209) 5%,
+    rgb(77, 59, 180) 100%
+  );
+  /*background-image: linear-gradient(180deg, #48e9e9 50%, #db4739 100%);*/
   height: 100vh;
 }
-.section1 .heading {
-  margin-top: -150px;
+.heading {
+  z-index: 1;
+  text-transform: uppercase;
 }
+.section1 .heading h1 {
+  font-size: 14vw;
+  height: auto;
+  word-wrap: break-word;
+}
+.section1 h1:hover {
+  transition: all 0.25s ease;
+  transform: rotate(2deg);
+}
+/*.section1 .image-ms {
+  margin: -150px -20px 0;
+  min-height: 100vh;
+  background-image: url("img-makerspace.jpg");
+  background-size: cover;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}*/
 .section2 {
   padding-top: 150px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-image: linear-gradient(180deg, #db4739 0%, #388f92 100%);
+  background-image: linear-gradient(180deg, #db4739 0%, #b6702e 100%);
   min-height: 100vh;
 }
-.section2-innhold {
+.section3 {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: linear-gradient(180deg, #db4739 0%, #b6702e 100%);
+  min-height: 100vh;
+}
+.section3-innhold {
   display: flex;
   flex-direction: row;
   padding: 0 50px;
   flex-wrap: wrap;
   justify-content: center;
 }
-.section2-innhold #kol-1,
+.frontbilder {
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+#arduino {
+  background-image: url(./images/arduino-transparent.png);
+  filter: drop-shadow(20px 20px 50px rgba(9, 32, 240, 0.8));
+}
+#microbit {
+  background-image: url(./images/microbit.png);
+  filter: drop-shadow(20px 20px 50px rgba(11, 243, 62, 0.8));
+}
+#creality {
+  background-image: url(./images/creality.png);
+  filter: drop-shadow(20px 20px 50px rgba(243, 11, 166, 0.8));
+}
+#lego {
+  background-image: url(./images/mindstorm.png);
+  filter: drop-shadow(20px 20px 50px rgba(253, 207, 0, 0.8));
+}
+.section3-innhold #kol-1,
 #kol-2,
 #kol-3,
 #kol-4 {
-  max-width: 500px;
+  max-width: 400px;
   padding: 50px;
 }
-.section2-innhold h3 {
+.section3-innhold h3 {
   text-transform: uppercase;
   border-bottom: 1px solid white;
   margin: 10px;
 }
-.section3 {
+.section4 {
   padding-top: 150px;
   display: flex;
   flex-direction: column;
@@ -152,17 +205,9 @@ main {
 #maps {
   padding: 50px 0;
 }
-.heading {
-  text-transform: uppercase;
-}
-
-.section1 h1:hover {
-  transition: all 0.25s ease;
-  transform: rotate(1deg);
-}
 
 #lieber {
-  max-width: 500px;
+  max-width: 300px;
   height: auto;
   display: block;
   position: absolute;
@@ -217,8 +262,12 @@ footer {
   transition: all 0.3s ease;
 }
 @media screen and (max-width: 850px) {
+  .section1 .heading h1 {
+    font-size: 3em;
+  }
   main .section2,
-  .section3 {
+  .section3,
+  .section4 {
     padding-top: 50px;
   }
   h1 {
@@ -258,11 +307,11 @@ footer {
   #blinky {
     max-width: 100px;
   }
-  .section2 .section2-innhold {
+  .section3 .section3-innhold {
     padding: 50px 10px;
   }
 
-  .section2-innhold #kol-1,
+  .section3-innhold #kol-1,
   #kol-2,
   #kol-3,
   #kol-4 {
@@ -323,66 +372,4 @@ footer {
 }
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
-}
-.icon {
-  position: absolute;
-  margin-left: 40px;
-  top: 62%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80px;
-  height: 60px;
-  cursor: pointer;
-}
-.arrow {
-  position: absolute;
-
-  top: 25px;
-  width: 10px;
-  height: 90%;
-  background-color: #fff;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-
-  animation: arrow 1700ms linear infinite;
-  animation-iteration-count: infinite;
-
-  /*transform-origin: top; */
-}
-.arrow::after,
-.arrow::before {
-  content: "";
-  position: absolute;
-  height: 60%;
-  width: 10px;
-  top: 33px;
-  right: 8px;
-  background-color: #fff;
-}
-
-.arrow::after {
-  top: 33px;
-  left: 8px;
-  transform: rotate(45deg);
-}
-
-.arrow::before {
-  bottom: 12px;
-  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
-  transform: rotate(135deg);
-}
-
-.arrowpoint {
-  animation-name: arrowpoint;
-  /* transform: translate(0);*/
-}
-@keyframes arrowpoint {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(15px);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }

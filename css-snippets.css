@@ -1,0 +1,62 @@
+.icon {
+  position: absolute;
+  margin-left: 40px;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 60px;
+  cursor: pointer;
+}
+.arrow {
+  position: absolute;
+
+  top: 25px;
+  width: 10px;
+  height: 90%;
+  background-color: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+
+  animation: arrow 1700ms linear infinite;
+  animation-iteration-count: infinite;
+
+  /*transform-origin: top; */
+}
+.arrow::after,
+.arrow::before {
+  content: "";
+  position: absolute;
+  height: 60%;
+  width: 10px;
+  top: 33px;
+  right: 8px;
+  background-color: #fff;
+}
+
+.arrow::after {
+  top: 33px;
+  left: 8px;
+  transform: rotate(45deg);
+}
+
+.arrow::before {
+  bottom: 12px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+  transform: rotate(135deg);
+}
+
+.arrowpoint {
+  animation-name: arrowpoint;
+  /* transform: translate(0);*/
+}
+@keyframes arrowpoint {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
