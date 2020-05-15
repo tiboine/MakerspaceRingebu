@@ -84,7 +84,7 @@ a {
 }
 
 .toggler {
-    visibility: visible;
+    visibility: hidden;
 }
 
 .logo {
