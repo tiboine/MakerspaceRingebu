@@ -183,7 +183,6 @@ a {
 .utstyr {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     padding-top: 150px;
     text-align: center;
     background-image: linear-gradient(180deg, #db4739 0%, #b6702e 100%);
@@ -305,6 +304,9 @@ footer {
         position: fixed;
         transform: rotate(0deg);
         margin-top: 0;
+    }
+    .hva {
+        padding-top: 1500px;
     }
     .menu ul,
     a {
