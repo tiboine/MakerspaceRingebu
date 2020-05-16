@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$desktop: 840px;
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+$desktop-nav: 1024px;
+@mixin desktop-nav {
+    @media (min-width: #{$desktop-nav}) {
+        @content;
+    }
+}
+
+a,
+ul {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    outline: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow-x: hidden;
+    color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    font-style: normal;
+}
+
+
+/*
+header {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    padding: 10px 50px 10px;
+    font-family: "Oswald", sans-serif;
+    font-style: italic;
+    z-index: 1;
+}*/
+
+.subtitle {
+    visibility: hidden;
+}
+
+nav {
+    z-index: 998;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    background: black;
+    width: 100%;
+    top: 0;
+    .logo,
+    a {
+        z-index: 999;
+        max-height: 80px;
+        margin: 0 auto;
+        text-transform: uppercase;
+        font-size: 2em;
+        text-shadow: 3px 3px rgba(211, 88, 17, 0.623);
+    }
+    .bottom-nav {
+        width: 100%;
+        position: fixed;
+        background: black;
+        color: white;
+        height: 50px;
+        bottom: 0;
+        @include desktop-nav {
+            top: 0;
+            border: none;
+            background: none;
+            padding-right: 10px;
+        }
+        a,
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            padding-top: 7px;
+            outline: 0;
+            @include desktop-nav {
+                justify-content: flex-end;
+                padding: 4px 5px;
+            }
+        }
+        a:active {
+            background-color: pink;
+        }
+    }
+}
+
+main {
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.623);
+    flex-grow: 1;
+    @include desktop {
+        .module {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 6em;
+        }
+        h2 {
+            font-size: 4em;
+        }
+        p {
+            font-size: 1.5em;
+        }
+    }
+    h2 {
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        text-transform: uppercase;
+    }
+    .module {
+        padding: 0 20px 20px;
+    }
+    .intro {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+        p {
+            text-shadow: 3px 3px 2px rgba(211, 88, 17, 0.623);
+            background-image: linear-gradient(80deg, #fff 0%, rgb(226, 226, 226));
+            padding: 0.4em;
+            font-size: 2em;
+            color: rgb(0, 0, 0);
+            text-transform: uppercase;
+            font-style: normal;
+            border-radius: 5px;
+            @include desktop {
+                font-size: 4em;
+            }
+        }
+        #box {
+            max-width: 90vw;
+            margin: 0 auto;
+            -webkit-box-shadow: 15px 15px 23px -19px rgba(0, 0, 0, 0.9);
+            -moz-box-shadow: 15px 15px 23px -19px rgba(0, 0, 0, 0.9);
+            box-shadow: 15px 15px 23px -19px rgba(0, 0, 0, 0.9);
+            @include desktop {
+                max-width: 1200px;
+            }
+        }
+        #box2 {
+            max-width: 90vw;
+            margin: 50px;
+            font-size: 1.7em;
+            border: 2px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.25s;
+            text-transform: uppercase;
+            @include desktop {
+                max-width: 450px;
+                padding: 25px;
+                margin: 50px auto;
+            }
+            &:hover {
+                background-color: #ff4500;
+            }
+        }
+    }
+}
+
+.intro:after {
+    content: "";
+    background: url("images/makerspace-blurred.jpg") no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    max-height: 100vh;
+    z-index: -1;
+}
+
+.hva {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-image: linear-gradient(180deg, #db4739 0%, #b6702e 100%);
+    min-height: 100vh;
+}
+
+.utstyr {
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    text-align: center;
+    background-image: linear-gradient(180deg, #db4739 0%, #9c2b21 100%);
+}
+
+.utstyr-content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    max-width: 1600px;
+    text-align: center;
+    justify-content: center;
+}
+
+.innhold,
+#kol-1,
+#kol-2,
+#kol-3,
+#kol-4 {
+    max-width: 500px;
+    min-width: 200px;
+    padding: 50px;
+}
+
+.frontbilder {
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#arduino {
+    background-image: url(./images/arduino-transparent.png);
+    filter: drop-shadow(20px 20px 50px rgba(9, 32, 240, 0.8));
+}
+
+#microbit {
+    background-image: url(./images/microbit.png);
+    filter: drop-shadow(20px 20px 50px rgba(11, 243, 62, 0.8));
+}
+
+#creality {
+    background-image: url(./images/creality.png);
+    filter: drop-shadow(20px 20px 50px rgba(243, 11, 166, 0.8));
+}
+
+#lego {
+    background-image: url(./images/mindstorm.png);
+    filter: drop-shadow(20px 20px 50px rgba(253, 207, 0, 0.8));
+}
+
+#snapmaker {
+    background-image: url(./images/snapmaker.png);
+    filter: drop-shadow(20px 20px 50px rgba(255, 255, 255, 0.8));
+}
+
+.hvor {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 150px;
+    text-align: center;
+    background-image: linear-gradient(180deg, #db4739 0%, #df3030 100%);
+}
+
+#maps {
+    padding: 50px 0;
+}
+
+footer {
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.623);
+    display: flex;
+    background: #385592;
+    color: white;
+    height: 100%;
+    width: 100%;
+    border-top: 1px solid white;
+    justify-content: center;
+    bottom: 0;
+    background-image: linear-gradient(180deg, #df3030 0, #5a57f1 100%);
+}
+
+.footer-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 50px 0;
+    @include desktop {
+        flex-direction: row;
+    }
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 20px;
+    @include desktop {
+        padding: 10px 40px;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
