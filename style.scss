@@ -58,18 +58,17 @@ header {
     z-index: 1;
 }*/
 
-.subtitle {
-    visibility: hidden;
-}
-
 nav {
     z-index: 998;
     display: flex;
     flex-direction: row;
-    position: fixed;
+    position: relative;
     background: black;
     width: 100%;
     top: 0;
+    @include desktop {
+        position: fixed;
+    }
     .logo,
     a {
         z-index: 999;
@@ -113,7 +112,6 @@ nav {
 }
 
 main {
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.623);
     flex-grow: 1;
     @include desktop {
         .module {
@@ -140,16 +138,14 @@ main {
         padding: 0 20px 20px;
     }
     .intro {
-        max-width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        padding-top: 100px;
         text-align: center;
         height: 100vh;
         p {
-            text-shadow: 3px 3px 2px rgba(211, 88, 17, 0.623);
-            background-image: linear-gradient(80deg, #fff 0%, rgb(226, 226, 226));
-            padding: 0.4em;
+            background-color: rgb(204, 204, 204);
+            border: 2px solid black;
             font-size: 2em;
             color: rgb(0, 0, 0);
             text-transform: uppercase;
@@ -160,31 +156,33 @@ main {
             }
         }
         #box {
-            max-width: 90vw;
+            width: 90vw;
             margin: 0 auto;
-            -webkit-box-shadow: 15px 15px 23px -19px rgba(0, 0, 0, 0.9);
+            /*-webkit-box-shadow: 15px 15px 23px -19px rgba(0, 0, 0, 0.9);
             -moz-box-shadow: 15px 15px 23px -19px rgba(0, 0, 0, 0.9);
-            box-shadow: 15px 15px 23px -19px rgba(0, 0, 0, 0.9);
+            box-shadow: 15px 15px 23px -19px rgba(0, 0, 0, 0.9);*/
             @include desktop {
                 max-width: 1200px;
             }
         }
         #box2 {
-            max-width: 90vw;
-            margin: 50px;
+            width: 90vw;
+            margin: 400px auto;
+            background-color: #c21434;
+            color: white;
             font-size: 1.7em;
-            border: 2px solid white;
+            border: 1px solid white;
             border-radius: 5px;
             cursor: pointer;
             transition: 0.25s;
             text-transform: uppercase;
             @include desktop {
-                max-width: 450px;
                 padding: 25px;
-                margin: 50px auto;
+                margin: 500px auto;
+                width: auto;
             }
             &:hover {
-                background-color: #ff4500;
+                background-color: #36aae4;
             }
         }
     }
@@ -192,7 +190,7 @@ main {
 
 .intro:after {
     content: "";
-    background: url("images/makerspace-blurred.jpg") no-repeat center center/cover;
+    background: url("images/Ringebu.svg") no-repeat center center/cover;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -202,11 +200,10 @@ main {
 }
 
 .hva {
-    padding: 50px 0;
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-image: linear-gradient(180deg, #db4739 0%, #b6702e 100%);
+    background-image: linear-gradient(180deg, #36aae4 0%, #0880bd 100%);
     min-height: 100vh;
 }
 
@@ -215,7 +212,7 @@ main {
     flex-direction: column;
     padding-top: 150px;
     text-align: center;
-    background-image: linear-gradient(180deg, #db4739 0%, #9c2b21 100%);
+    background-image: linear-gradient(180deg, #0880bd 0%, #9c2b21 100%);
 }
 
 .utstyr-content {
